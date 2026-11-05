@@ -3,226 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brain TDS Logistics | International Importation & Delivery</title>
-  <meta name="description" content="Brain TDS Logistics - Importation & delivery from China, Dubai, USA & Nigeria to Ghana. Sea & air freight, customs handling, and live tracking." />
+  <meta name="api-base-url" content="" />
+  <title>Brain TDS Logistics | International Importation &amp; Delivery</title>
+  <meta name="description" content="Importation and delivery from China, Dubai, USA and Nigeria to Ghana. Move cargo from anywhere to Ghana reliably." />
+  <link rel="canonical" href="https://Zackconnect.github.io/BRAIN-TDS-LOGISTICS/" />
+  <meta property="og:url" content="https://Zackconnect.github.io/BRAIN-TDS-LOGISTICS/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-
-  <!-- NAVBAR -->
+<body data-page="home">
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
-      <a href="#home" class="brand">
+      <a href="index.html" class="brand">
         <span class="brand-name">BRAIN TDS LOGISTICS</span>
         <span class="brand-tagline">Freight Forwarding / Shipping / Courier Service</span>
       </a>
-      <nav class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#routes">Routes</a>
-        <a href="#warehouses">Warehouses</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="routes.html">Routes</a>
+        <a href="warehouses.html">Warehouses</a>
+        <a href="track.html">Track Shipment</a>
+        <a href="contact.html">Contact</a>
+        <a href="staff.html">Staff &amp; Admin</a>
+        <a class="nav-account" href="account.html">My Account</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <h1>WELCOME TO <span class="accent">BRAIN TDS LOGISTICS</span></h1>
-      <p class="hero-sub">Importation & delivery from China, Dubai, USA & Nigeria to Ghana. Move Cargo From Anywhere To Ghana — Reliably.</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Book a Shipment →</a>
-        <a href="#routes" class="btn btn-ghost">View Routes</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats">
-    <div class="container stats-grid">
-      <div class="stat"><div class="stat-value" data-target="4">0</div><div class="stat-label">Origin Countries</div></div>
-      <div class="stat"><div class="stat-value" data-target="2">0</div><div class="stat-label">GH Warehouses</div></div>
-      <div class="stat"><div class="stat-value">24/7</div><div class="stat-label">Tracking</div></div>
-    </div>
-  </section>
-
-  <!-- OFFICE LOCATION -->
-  <section class="section bg-cream" id="location">
-    <div class="container">
-      <div class="section-header center">
-        <h2>Our Main Office</h2>
-        <p class="muted">Find us at Koforidua Old Slaughter House with GPS coordinates and live map navigation.</p>
-      </div>
-      <div class="location-grid">
-        <div class="location-column">
-          <div class="location-details">
-            <ul class="location-list">
-              <li>📍 Main office: Koforidua, Old Slaughter House</li>
-              <li>🧭 GPS address: 6.0950, -0.2570</li>
-              <li><a class="contact-link" href="https://www.google.com/maps/dir/?api=1&destination=Old+Slaughter+House+Koforidua+Ghana" target="_blank" rel="noopener noreferrer">Open GPS map</a></li>
-            </ul>
-          </div>
-          <div class="map-embed">
-            <iframe title="Koforidua Old Slaughter House map" src="https://maps.google.com/maps?q=Old+Slaughter+House+Koforidua+Ghana&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-        <div class="location-about">
-          <h3>About Brain TDS Logistics</h3>
-          <p>At Brain TDS Logistics, we are committed to providing reliable, affordable, and efficient logistics and delivery solutions across Ghana and beyond. Based in Koforidua and in Accra, we specialize in cargo shipping, courier services, last-mile delivery, and international freight forwarding, helping individuals and businesses move goods with confidence.</p>
-          <p>With our extensive network and strategic presence across the Eastern Region and Ghana as a whole, we ensure that parcels, documents, commercial goods, and personal shipments are delivered safely and on time. We also facilitate air and sea shipments from China and the United Arab Emirates (UAE) to Ghana, offering competitive rates, transparent pricing, and dependable transit times.</p>
-          <p>Our mission is to simplify logistics by delivering exceptional service, innovative solutions, and unmatched customer support. Whether you are importing goods, running an online business, or sending packages to loved ones, Brain TDS Logistics is your trusted partner every step of the way.</p>
-          <h4>Why Choose Brain TDS Logistics?</h4>
-          <ul class="about-list">
-            <li>Fast and reliable delivery services</li>
-            <li>Affordable shipping and logistics solutions</li>
-            <li>Air and sea freight from China to Ghana</li>
-            <li>Safe handling of regular and special cargo</li>
-            <li>Dedicated customer support</li>
-            <li>Strategic operations across the Eastern Region</li>
-            <li>Flexible pricing and volume discounts</li>
-          </ul>
-          <h4>Our Vision</h4>
-          <p>To become the leading logistics and delivery company in Ghana by connecting businesses and communities through efficient, innovative, and customer-focused logistics solutions.</p>
-          <h4>Our Mission</h4>
-          <p>To provide dependable, secure, and cost-effective logistics services that empower businesses, support economic growth, and exceed customer expectations.</p>
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1>WELCOME TO <span class="accent">BRAIN TDS LOGISTICS</span></h1>
+        <p class="hero-sub">Importation &amp; delivery from China, Dubai, USA &amp; Nigeria to Ghana. Move Cargo From Anywhere To Ghana — Reliably.</p>
+        <div class="hero-cta">
+          <a href="contact.html#shipment-request" class="btn btn-primary">Book a Shipment →</a>
+          <a href="routes.html" class="btn btn-ghost">View Routes</a>
+          <a href="track.html" class="btn btn-ghost">Track Shipment</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <section class="section bg-cream" id="routes">
-    <div class="container">
-      <div class="section-header center">
-        <h2>Our Network: International Shipping Routes</h2>
-        <p class="muted">Choose from our trusted sea and air freight corridors connecting global markets to Ghana.</p>
-      </div>
-      <div class="cards-grid">
-        <article class="route-card">
-          <div class="emoji">🚢</div>
-          <h3>China → Ghana</h3>
-          <p>Sea & air freight from Guangzhou, Shenzhen, Yiwu and more.</p>
-          <div class="card-meta"><span>Mode: Sea/Air</span><span class="time">25-40 days</span></div>
-        </article>
-        <article class="route-card">
-          <div class="emoji">🛫</div>
-          <h3>Dubai → Ghana</h3>
-          <p>Reliable cargo shipping from UAE warehouses to Tema.</p>
-          <div class="card-meta"><span>Mode: Cargo</span><span class="time">10-18 days</span></div>
-        </article>
-        <article class="route-card">
-          <div class="emoji">🇺🇸</div>
-          <h3>USA → Ghana</h3>
-          <p>Consolidated cargo from major US ports & airports.</p>
-          <div class="card-meta"><span>Mode: Cargo</span><span class="time">18-30 days</span></div>
-        </article>
-        <article class="route-card">
-          <div class="emoji">🇳🇬</div>
-          <h3>Nigeria → Ghana</h3>
-          <p>Cross-border cargo shipping with fast turnaround.</p>
-          <div class="card-meta"><span>Mode: Cargo</span><span class="time">5-9 days</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- VALUE PROPOSITION -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-header center">
-        <h2>Why Choose Us: Built On Trust & Speed</h2>
-      </div>
-      <div class="features-grid">
-        <div class="feature"><div class="icon">🚢</div><h3>Sea & Air Freight</h3><p>Flexible options for every budget and timeline.</p></div>
-        <div class="feature"><div class="icon">🏭</div><h3>2 GH Warehouses</h3><p>Accra-Tema & Koforidua receiving hubs.</p></div>
-        <div class="feature"><div class="icon">🛡️</div><h3>Customs Handling</h3><p>End-to-end clearance with no surprises.</p></div>
-        <div class="feature"><div class="icon">📡</div><h3>Live Tracking</h3><p>Real-time updates on every shipment.</p></div>
-        <div class="feature"><div class="icon">🚚</div><h3>Last Mile Delivery</h3><p>Door-to-door delivery across Ghana with careful final-mile handling.</p></div>
-        <div class="feature"><div class="icon">📦</div><h3>Order Fulfillment</h3><p>Efficient pick, pack, and ship services for your customers and distribution needs.</p></div>
-        <div class="feature"><div class="icon">🔎</div><h3>Sourcing & Procurement</h3><p>Supplier sourcing and procurement support for smooth import operations.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WAREHOUSES -->
-  <section class="section bg-navy" id="warehouses">
-    <div class="container">
-      <div class="section-header center">
-        <h2 class="white">Our Warehouses</h2>
-        <p class="muted-light">Strategic receiving hubs across Ghana for efficient cargo handling.</p>
-      </div>
-      <div class="warehouses-grid">
-        <div class="warehouse-card"><div class="pin">📍</div><h3>Accra-Tema Hub</h3><p>Main receiving and distribution center</p></div>
-        <div class="warehouse-card"><div class="pin">📍</div><h3>Koforidua Hub</h3><p>Eastern region receiving center</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="contact">
+  <footer>
     <div class="footer-top">
       <div class="container footer-top-inner">
-        <span>🏭 Warehouses: Koforidua & Accra-Tema</span>
+        <span>🏭 Warehouses: Koforidua &amp; Accra-Tema</span>
         <span class="divider">|</span>
         <span>📞 +233 54 098 1590 / +233 20 327 6307</span>
       </div>
     </div>
     <div class="container footer-grid">
-      <div>
-        <h4>About</h4>
-        <p>Brain TDS Logistics - Your trusted partner for international importation and delivery into Ghana.</p>
-      </div>
-      <div>
-        <h4>Routes</h4>
-        <ul>
-          <li>🚢 China → Ghana</li>
-          <li>🛫 Dubai → Ghana</li>
-          <li>🇺🇸 USA → Ghana</li>
-          <li>🇳🇬 Nigeria → Ghana</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Warehouses</h4>
-        <ul>
-          <li>📍 Accra-Tema Hub</li>
-          <li>📍 Koforidua Hub</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li>📞 +233 54 098 1590</li>
-          <li>📞 +233 20 327 6307</li>
-          <li>✉️ info@braintdslogistics.com</li>
-          <li>📍 Main office: Koforidua, Old Slaughter House</li>
-          <li>🧭 GPS address: 6.0950, -0.2570</li>
-          <li><a class="contact-link" href="https://www.google.com/maps/dir/?api=1&destination=Old+Slaughter+House+Koforidua+Ghana" target="_blank" rel="noopener noreferrer">Open GPS map</a></li>
-        </ul>
-      </div>
+      <div><h4><a href="about.html">About</a></h4><p>Brain TDS Logistics - Your trusted partner for international importation and delivery into Ghana.</p></div>
+      <div><h4><a href="routes.html">Routes</a></h4><ul><li>🚢 China → Ghana</li><li>🛫 Dubai → Ghana</li><li>🇺🇸 USA → Ghana</li><li>🇳🇬 Nigeria → Ghana</li></ul></div>
+      <div><h4><a href="warehouses.html">Warehouses</a></h4><ul><li>📍 Accra-Tema Hub</li><li>📍 Koforidua Hub</li></ul></div>
+      <div><h4><a href="contact.html">Contact</a></h4><ul><li>📞 +233 54 098 1590</li><li>📞 +233 20 327 6307</li><li>✉️ info@braintdslogistics.com</li><li>📍 Koforidua, Old Slaughter House</li></ul></div>
     </div>
-    <div class="footer-social">
-      <div class="container">
-        <div class="social-links">
-          <a href="https://facebook.com/braintdslogistics" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/braintdslogistics" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="https://instagram.com/braintdslogistics" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://linkedin.com/company/braintdslogistics" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://youtube.com/@braintdslogistics" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a>
-          <a href="https://wa.me/233540981590" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">© 2026 Brain TDS Logistics. All rights reserved.</div>
-    </div>
+    <div class="footer-social"><div class="container"><div class="social-links">
+      <a href="https://facebook.com/braintdslogistics" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/braintdslogistics" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/braintdslogistics" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/company/braintdslogistics" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://youtube.com/@braintdslogistics" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/233540981590" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div></div></div>
+    <div class="footer-bottom"><div class="container">© 2026 Brain TDS Logistics. All rights reserved.</div></div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>

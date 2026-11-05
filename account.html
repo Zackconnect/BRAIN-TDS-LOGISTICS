@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="api-base-url" content="" />
+  <title>My Account | Brain TDS Logistics</title><meta name="description" content="Sign in or create a Brain TDS Logistics customer account." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /><link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="account">
+  <header class="navbar scrolled" id="navbar"><div class="container nav-inner">
+    <a href="index.html" class="brand"><span class="brand-name">BRAIN TDS LOGISTICS</span><span class="brand-tagline">Freight Forwarding / Shipping / Courier Service</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="about.html">About Us</a><a href="routes.html">Routes</a><a href="warehouses.html">Warehouses</a><a href="track.html">Track Shipment</a><a href="contact.html">Contact</a><a class="nav-account" href="account.html" aria-current="page">My Account</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div></header>
+  <main class="page-content">
+    <section class="section bg-cream"><div class="container">
+      <div class="section-header center"><span class="eyebrow">YOUR SHIPMENTS, IN ONE PLACE</span><h1 class="page-title">Welcome to your logistics portal</h1><p class="muted">Track cargo, request a shipment and stay up to date from pickup to delivery.</p></div>
+      <div class="auth-card-grid">
+        <form class="inquiry-form auth-card" id="loginForm">
+          <div class="auth-heading"><span class="auth-icon"><i class="fa-solid fa-right-to-bracket"></i></span><div><h2>Sign in</h2><p class="muted">Access your account and shipment dashboard.</p></div></div>
+          <div class="form-field"><label for="loginEmail">Email address</label><input id="loginEmail" name="email" type="email" autocomplete="email" required /></div>
+          <div class="form-field"><label for="loginPassword">Password</label><input id="loginPassword" name="password" type="password" autocomplete="current-password" minlength="8" required /></div>
+          <button class="btn btn-primary" id="loginSubmit" type="submit">Sign in to account</button>
+          <div class="form-message hidden" id="loginResult" role="status" aria-live="polite"></div>
+        </form>
+        <form class="inquiry-form auth-card" id="signupForm">
+          <div class="auth-heading"><span class="auth-icon"><i class="fa-solid fa-user-plus"></i></span><div><h2>Create account</h2><p class="muted">Save bookings and see your shipment history.</p></div></div>
+          <div class="form-field"><label for="signupName">Full name</label><input id="signupName" name="fullName" type="text" maxlength="120" autocomplete="name" required /></div>
+          <div class="form-field"><label for="signupPhone">Phone number</label><input id="signupPhone" name="phone" type="tel" maxlength="30" autocomplete="tel" required /></div>
+          <div class="form-field"><label for="signupEmail">Email address</label><input id="signupEmail" name="email" type="email" maxlength="254" autocomplete="email" required /></div>
+          <div class="form-field"><label for="signupPassword">Password</label><input id="signupPassword" name="password" type="password" autocomplete="new-password" minlength="8" required /><span class="field-hint">Use at least 8 characters.</span></div>
+          <button class="btn btn-dark" id="signupSubmit" type="submit">Create customer account</button>
+          <div class="form-message hidden" id="signupResult" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+      <form class="recovery-form" id="recoveryForm">
+        <div><h2>Forgot your password?</h2><p class="muted">We’ll send account recovery instructions to your email.</p></div>
+        <div class="recovery-controls"><label class="sr-only" for="recoveryEmail">Account email</label><input id="recoveryEmail" name="email" type="email" placeholder="Your account email" required /><button class="btn btn-ghost-dark" id="recoverySubmit" type="submit">Send recovery email</button></div>
+        <div class="form-message hidden" id="recoveryResult" role="status" aria-live="polite"></div>
+      </form>
+      <form class="recovery-form hidden" id="passwordResetForm">
+        <div><h2>Choose a new password</h2><p class="muted">Set a new password for your Brain TDS account.</p></div>
+        <div class="recovery-controls"><label class="sr-only" for="newPassword">New password</label><input id="newPassword" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" placeholder="At least 8 characters" required /><button class="btn btn-primary" id="passwordResetSubmit" type="submit">Update password</button></div>
+        <div class="form-message hidden" id="passwordResetResult" role="status" aria-live="polite"></div>
+      </form>
+    </div></section>
+  </main>
+  <footer><div class="container footer-grid">
+    <div><h4><a href="about.html">About</a></h4><p>Brain TDS Logistics — reliable international shipping and delivery into Ghana.</p></div>
+    <div><h4><a href="routes.html">Routes</a></h4><ul><li>China → Ghana</li><li>Dubai → Ghana</li><li>USA → Ghana</li><li>Nigeria → Ghana</li></ul></div>
+    <div><h4><a href="warehouses.html">Warehouses</a></h4><ul><li>Accra-Tema</li><li>Koforidua</li></ul></div>
+    <div><h4><a href="contact.html">Need help?</a></h4><ul><li>+233 54 098 1590</li><li>info@braintdslogistics.com</li></ul></div>
+  </div><div class="footer-bottom"><div class="container">© 2026 Brain TDS Logistics. All rights reserved.</div></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
