@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="api-base-url" content="" />
+  <title>Shipment Dashboard | Brain TDS Logistics</title><meta name="description" content="Manage shipping requests and track your Brain TDS Logistics cargo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /><link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="customer-dashboard">
+  <header class="navbar scrolled" id="navbar"><div class="container nav-inner">
+    <a href="index.html" class="brand"><span class="brand-name">BRAIN TDS LOGISTICS</span><span class="brand-tagline">Customer shipment portal</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Account navigation"><a href="index.html">Website</a><a href="track.html">Track Shipment</a><a href="customer-dashboard.html" aria-current="page">My Shipments</a><a href="contact.html">Contact</a><button class="nav-logout" type="button" data-logout>Sign out</button></nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div></header>
+  <main class="page-content portal-page"><div class="container">
+    <section class="portal-welcome"><div><span class="eyebrow">CUSTOMER PORTAL</span><h1>Good to see you, <span id="customerName">there</span></h1><p class="muted">Your logistics at a glance. We’ll keep every shipment moving.</p></div><a href="#new-booking" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Book a shipment</a></section>
+    <div class="metric-grid" id="customerMetrics">
+      <article class="metric-card"><span class="metric-icon blue"><i class="fa-solid fa-boxes-stacked"></i></span><span class="metric-label">Active shipments</span><strong id="activeShipmentCount">—</strong></article>
+      <article class="metric-card"><span class="metric-icon gold"><i class="fa-solid fa-truck-fast"></i></span><span class="metric-label">Delivered</span><strong id="deliveredShipmentCount">—</strong></article>
+      <article class="metric-card"><span class="metric-icon green"><i class="fa-solid fa-clipboard-list"></i></span><span class="metric-label">Open requests</span><strong id="openRequestCount">—</strong></article>
+    </div>
+    <section class="dashboard-panel">
+      <div class="panel-heading"><div><span class="eyebrow">LIVE MOVEMENT</span><h2>Your shipments</h2></div><a href="track.html" class="text-link">Track a shipment <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="table-wrap"><table class="data-table"><thead><tr><th>Tracking number</th><th>Route</th><th>Status</th><th>Est. delivery</th><th>Last updated</th></tr></thead><tbody id="customerShipments"><tr><td colspan="5" class="empty-row">Loading your shipments…</td></tr></tbody></table></div>
+    </section>
+    <section class="dashboard-panel">
+      <div class="panel-heading"><div><span class="eyebrow">ON THE MOVE</span><h2>Shipment requests</h2></div></div>
+      <div class="table-wrap"><table class="data-table"><thead><tr><th>Request date</th><th>Route</th><th>Method</th><th>Status</th></tr></thead><tbody id="customerInquiries"><tr><td colspan="4" class="empty-row">Loading requests…</td></tr></tbody></table></div>
+    </section>
+    <section class="dashboard-panel booking-panel" id="new-booking">
+      <div class="panel-heading"><div><span class="eyebrow">LET’S GET IT MOVING</span><h2>Request a new shipment</h2><p class="muted">We’ll review your details and contact you to confirm pricing and collection.</p></div></div>
+      <form id="customerBookingForm" class="booking-grid">
+        <div class="form-field"><label for="bookingOrigin">Shipping from</label><select id="bookingOrigin" name="origin" required><option value="">Select an origin</option><option>China</option><option>Dubai / UAE</option><option>United States</option><option>Nigeria</option><option>Other</option></select></div>
+        <div class="form-field"><label for="bookingDestination">Deliver to</label><input id="bookingDestination" name="destination" value="Ghana" maxlength="120" required /></div>
+        <div class="form-field"><label for="bookingMethod">Preferred method</label><select id="bookingMethod" name="serviceMode" required><option value="">Choose a method</option><option>Air</option><option>Sea</option><option>Road</option></select></div>
+        <div class="form-field form-field-wide"><label for="bookingCargo">What are you shipping?</label><textarea id="bookingCargo" name="cargoDescription" rows="3" maxlength="2000" required placeholder="Cargo type, quantity and any special handling needs"></textarea></div>
+        <div class="booking-submit"><button class="btn btn-primary" id="bookingSubmit" type="submit">Send booking request <i class="fa-solid fa-arrow-right"></i></button><div class="form-message hidden" id="bookingResult" role="status" aria-live="polite"></div></div>
+      </form>
+    </section>
+  </div></main>
+  <footer><div class="footer-bottom"><div class="container">© 2026 Brain TDS Logistics. Need support? <a href="contact.html">Contact our team</a>.</div></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

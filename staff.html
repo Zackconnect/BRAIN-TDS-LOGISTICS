@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="api-base-url" content="" />
+  <title>Admin &amp; Operations Center | Brain TDS Logistics</title><meta name="description" content="Manage shipment requests, deliveries, accounts and system health for Brain TDS Logistics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /><link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="staff">
+  <header class="navbar scrolled" id="navbar"><div class="container nav-inner">
+    <a href="index.html" class="brand"><span class="brand-name">BRAIN TDS LOGISTICS</span><span class="brand-tagline">Admin &amp; operations center</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Operations navigation"><a href="index.html">Website</a><a href="#overview">Dashboard</a><a href="#bookings">Bookings</a><a href="#shipments">Shipments</a><a href="#updateShipment">Tracking</a><a class="hidden" id="adminAccountsLink" href="#adminUsersPanel">Accounts</a><a class="hidden" id="adminHealthLink" href="#adminSystemPanel">System health</a><a href="account.html">My Account</a><button class="nav-logout" type="button" data-logout>Sign out</button></nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div></header>
+  <main class="page-content portal-page"><div class="container">
+    <section class="portal-welcome" id="overview"><div><span class="eyebrow" id="portalEyebrow">LOGISTICS CONTROL TOWER</span><h1 id="portalTitle">Operations dashboard</h1><p class="muted" id="portalDescription">One clear view of cargo movement, customer requests and delivery performance.</p></div><div class="portal-actions"><span class="live-pill"><i></i> OPERATIONS LIVE</span><button class="btn btn-ghost portal-refresh" id="refreshDashboard" type="button"><i class="fa-solid fa-rotate"></i> Refresh data</button></div></section>
+    <div class="form-message hidden" id="staffPageMessage" role="status" aria-live="polite"></div>
+    <section class="dashboard-panel admin-system-panel hidden" id="adminSystemPanel">
+      <div class="panel-heading"><div><span class="eyebrow">SYSTEM OVERVIEW</span><h2>Service health</h2><p class="muted">Live API, database and authentication configuration checks.</p></div><button class="table-action" id="checkSystemHealth" type="button"><i class="fa-solid fa-rotate"></i> Check now</button></div>
+      <div class="system-health-grid">
+        <article class="system-health-item"><span>API</span><strong id="apiHealthStatus" class="health-unknown">Checking…</strong></article>
+        <article class="system-health-item"><span>Database</span><strong id="databaseHealthStatus" class="health-unknown">Checking…</strong></article>
+        <article class="system-health-item"><span>Authentication</span><strong id="authHealthStatus" class="health-unknown">Checking…</strong></article>
+        <small class="health-updated" id="healthCheckedAt">Not checked yet</small>
+      </div>
+    </section>
+    <div class="metric-grid" id="staffMetrics">
+      <article class="metric-card"><span class="metric-icon gold"><i class="fa-solid fa-inbox"></i></span><span class="metric-label">New booking requests</span><strong id="newRequestCount">—</strong><small>Need review</small></article>
+      <article class="metric-card"><span class="metric-icon blue"><i class="fa-solid fa-truck-fast"></i></span><span class="metric-label">Active shipments</span><strong id="staffActiveShipments">—</strong><small>In the delivery network</small></article>
+      <article class="metric-card"><span class="metric-icon green"><i class="fa-solid fa-circle-check"></i></span><span class="metric-label">Delivered</span><strong id="staffDeliveredShipments">—</strong><small>Successfully completed</small></article>
+      <article class="metric-card"><span class="metric-icon purple"><i class="fa-solid fa-users"></i></span><span class="metric-label">Customer accounts</span><strong id="staffCustomerCount">—</strong><small>Registered customers</small></article>
+    </div>
+    <div class="operations-grid">
+      <section class="dashboard-panel ops-main-panel" id="bookings"><div class="panel-heading"><div><span class="eyebrow">CUSTOMER PIPELINE</span><h2>Booking requests</h2></div><span class="record-count" id="requestRecordCount">—</span></div>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th>Customer</th><th>Route &amp; cargo</th><th>Received</th><th>Status</th><th>Action</th></tr></thead><tbody id="staffInquiries"><tr><td colspan="5" class="empty-row">Loading booking requests…</td></tr></tbody></table></div>
+      </section>
+      <section class="dashboard-panel ops-side-panel"><div class="panel-heading"><div><span class="eyebrow">CREATE TRACKING</span><h2>Register a shipment</h2></div></div>
+        <form id="createShipmentForm" class="stack-form">
+          <div class="form-field"><label for="shipmentInquiry">From booking request</label><select id="shipmentInquiry" name="inquiryId"><option value="">Create without a request</option></select></div>
+          <div class="form-field"><label for="newTrackingNumber">Tracking number <span class="muted">(optional)</span></label><input id="newTrackingNumber" name="trackingNumber" maxlength="40" placeholder="Auto-generate if blank" /></div>
+          <div class="form-field"><label for="newShipmentOrigin">Origin</label><input id="newShipmentOrigin" name="origin" required maxlength="120" /></div>
+          <div class="form-field"><label for="newShipmentDestination">Destination</label><input id="newShipmentDestination" name="destination" value="Ghana" required maxlength="120" /></div>
+          <div class="form-field"><label for="newShipmentMode">Service</label><select id="newShipmentMode" name="serviceMode" required><option>Air</option><option selected>Sea</option><option>Road</option></select></div>
+          <div class="form-field"><label for="newShipmentEta">Estimated delivery</label><input id="newShipmentEta" name="estimatedDelivery" type="date" /></div>
+          <div class="form-field"><label for="newShipmentCargo">Cargo description</label><textarea id="newShipmentCargo" name="cargoDescription" rows="2" maxlength="2000"></textarea></div>
+          <button class="btn btn-primary" id="createShipmentSubmit" type="submit">Create shipment <i class="fa-solid fa-arrow-right"></i></button>
+          <div class="form-message hidden" id="createShipmentResult" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+    </div>
+    <section class="dashboard-panel" id="shipments"><div class="panel-heading"><div><span class="eyebrow">NETWORK VISIBILITY</span><h2>Active shipment register</h2></div><span class="record-count" id="shipmentRecordCount">—</span></div>
+      <div class="table-wrap"><table class="data-table"><thead><tr><th>Tracking</th><th>Customer</th><th>Route</th><th>Status</th><th>Est. delivery</th><th>Action</th></tr></thead><tbody id="staffShipments"><tr><td colspan="6" class="empty-row">Loading shipment register…</td></tr></tbody></table></div>
+    </section>
+    <section class="dashboard-panel" id="updateShipment">
+      <div class="panel-heading"><div><span class="eyebrow">KEEP EVERYONE INFORMED</span><h2>Post a tracking update</h2><p class="muted">Each update is added to the customer-visible shipment timeline.</p></div></div>
+      <form id="shipmentEventForm" class="booking-grid">
+        <div class="form-field"><label for="eventShipment">Shipment</label><select id="eventShipment" name="shipmentId" required><option value="">Select a shipment</option></select></div>
+        <div class="form-field"><label for="eventStatus">New status</label><select id="eventStatus" name="status" required><option value="">Select status</option><option>Received at origin warehouse</option><option>In transit</option><option>Customs clearance</option><option>Arrived at destination</option><option>Out for delivery</option><option>Ready for pickup</option><option>Delivered</option><option>On hold</option></select></div>
+        <div class="form-field"><label for="eventLocation">Current location</label><input id="eventLocation" name="location" required maxlength="120" /></div>
+        <div class="form-field form-field-wide"><label for="eventDescription">Update details</label><textarea id="eventDescription" name="description" rows="2" maxlength="500" required placeholder="What changed? Add a helpful customer-facing update."></textarea></div>
+        <div class="booking-submit"><button class="btn btn-dark" id="eventSubmit" type="submit">Publish tracking update <i class="fa-solid fa-paper-plane"></i></button><div class="form-message hidden" id="eventResult" role="status" aria-live="polite"></div></div>
+      </form>
+    </section>
+    <section class="dashboard-panel hidden" id="adminUsersPanel"><div class="panel-heading admin-users-heading"><div><span class="eyebrow">ACCESS CONTROL</span><h2>Accounts &amp; staff access</h2><p class="muted">Grant staff access only to trusted operations personnel. Showing the most recent accounts available.</p></div><label class="admin-user-search"><span class="sr-only">Search accounts</span><input id="adminUserSearch" type="search" placeholder="Search name, email or role" autocomplete="off" /></label></div>
+      <div class="table-wrap"><table class="data-table"><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Created</th><th>Access</th></tr></thead><tbody id="adminUsers"><tr><td colspan="5" class="empty-row">Loading accounts…</td></tr></tbody></table></div>
+    </section>
+  </div></main>
+  <footer><div class="footer-bottom"><div class="container">© 2026 Brain TDS Logistics. Internal operations portal. <a href="contact.html">Customer website</a></div></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
